@@ -17,9 +17,9 @@ export default function TarotPage() {
             </h1>
             <div className="section-divider my-8" />
             <p className="max-w-xl font-sans text-base font-light leading-8 tracking-[0.05em] text-text-secondary">
-              Cada carta permanece velada até o momento certo. Escolha pelo
-              chamado visual, complete a mesa e permita que a mensagem apareça
-              como um pequeno ritual para o dia.
+              Cada carta permanece velada até o momento certo. Um ritual para
+              quem organiza processos, lê sinais e sabe que uma pausa estratégica
+              também melhora decisões.
             </p>
           </div>
 
@@ -38,7 +38,8 @@ export default function TarotPage() {
               <p className="mt-6 text-sm leading-7 tracking-[0.05em] text-text-secondary">
                 Defina a profundidade da leitura, embaralhe os 22 Arcanos
                 Maiores e toque nas cartas ainda ocultas. O mistério só se abre
-                quando você revelar a tiragem.
+                quando você revela a tiragem, como um insight que chega depois
+                de organizar a mesa e respirar.
               </p>
             </div>
           </div>

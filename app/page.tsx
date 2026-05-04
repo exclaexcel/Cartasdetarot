@@ -23,8 +23,9 @@ export default function Home() {
             </h1>
             <div className="section-divider my-8" />
             <p className="max-w-2xl font-serif text-2xl font-light italic leading-10 text-text-secondary">
-              Cada carta, um aroma simbólico. Cada cristal, uma intenção.
-              Um portal separado, mas aceso dentro do mesmo universo de cuidado da LuzComAromas.
+              Lógica para organizar o invisível. Intuição para escutar o que a
+              planilha ainda não sabe dizer. Um portal separado, mas aceso no
+              mesmo universo de cuidado da LuzComAromas.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -70,7 +71,8 @@ export default function Home() {
               <div className="relative border border-golden/15 bg-black/25 p-5">
                 <p className="font-serif text-3xl font-light text-text-primary">A chama sabe onde tocar.</p>
                 <p className="mt-2 text-sm leading-6 text-text-secondary">
-                  Um ritual digital para acolher perguntas, revelar símbolos e guiar pequenos gestos de presença.
+                  Um ritual digital para acolher perguntas, organizar sinais e
+                  guiar pausas estratégicas de presença.
                 </p>
               </div>
             </div>
@@ -108,7 +110,8 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.38em] text-golden">Convite</p>
               <h2 className="mt-4 font-serif text-4xl font-light text-text-primary sm:text-5xl">Comece pela carta que chama por você.</h2>
               <p className="mt-4 max-w-2xl leading-7 text-text-secondary">
-                O Tarot agora nasce do mesmo repertório da marca: chama, aroma, pausa, intenção e retorno para casa em si.
+                O Tarot nasce do mesmo repertório da marca: chama, aroma, pausa,
+                intenção e decisões mais conscientes antes do próximo movimento.
               </p>
             </div>
             <Link
