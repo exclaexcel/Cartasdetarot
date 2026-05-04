@@ -6,6 +6,15 @@ Este documento resume a rodada inicial de desenvolvimento para facilitar a conti
 
 O **Oraculo LuzComAromas** e um web app separado, mas visual e conceitualmente integrado ao universo da marca LuzComAromas.
 
+Conceito central atualizado: **Bruxa dos Dados**.
+
+A experiencia deve unir:
+
+- logica: organizacao, processos, dados, escolhas claras e tomada de decisao;
+- intuicao: magia, rituais, aromas, pausas estrategicas e escuta interna.
+
+O app deve conversar com uma pessoa que transita entre o mundo real/corporativo e o mundo sensorial/mistico: alguem que organiza planilhas, le processos, toma decisoes e tambem usa velas, cristais, fases da lua e pausas de autocuidado como ferramentas de presenca.
+
 URL de producao:
 
 - https://cartasdetarot.vercel.app
@@ -77,6 +86,14 @@ Linguagem de marca:
 - "pausa"
 - "voltar para casa em si"
 
+Diretrizes de copywriting:
+
+- manter tom sensorial, acolhedor e ritualistico;
+- evitar linguagem generica, pronta ou cliche de Tarot;
+- conectar sutilmente o mistico ao mundo real/corporativo;
+- usar referencias como planilhas, processos, tomada de decisao, pausas estrategicas e cafe de qualidade quando fizer sentido;
+- associar leituras a gestos simples: acender uma vela, organizar o ambiente, respirar, pausar para um cafe ou registrar uma decisao.
+
 Estilo visual:
 
 - fundo roxo profundo e preto;
@@ -85,6 +102,30 @@ Estilo visual:
 - CTAs retangulares, nao arredondados;
 - atmosfera mistica, sensorial e premium;
 - cartas/cristais tratados como extensoes de rituais.
+
+Regras obrigatorias de UI/design system:
+
+- usar exatamente os tokens visuais definidos acima;
+- estilo minimalista, elegante, limpo e premium;
+- botoes e CTAs devem usar formato retangular (`rounded-none`);
+- nao usar bordas arredondadas em botoes principais;
+- bordas devem ser finas e sutis (`border`, `border-white/10`, dourado suave);
+- titulos com Cormorant Garamond;
+- textos de apoio com Raleway/Montserrat;
+- animacoes devem ser suaves, cinematograficas e discretas;
+- interacoes com cartas podem usar glow/brilho dourado sutil;
+- manter misterio: cartas nao aparecem como catalogo aberto, apenas apos interacao/revelacao.
+
+Regras tecnicas:
+
+- Next.js 14 com App Router;
+- TypeScript rigoroso;
+- evitar `any`;
+- criar interfaces/tipos para dados estruturados;
+- Server Components por padrao;
+- usar `"use client"` somente quando houver hooks/interatividade;
+- Tailwind CSS para estilo;
+- Lucide React para icones.
 
 ## Funcionalidades implementadas
 

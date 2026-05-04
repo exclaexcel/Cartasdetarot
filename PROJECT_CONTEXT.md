@@ -6,6 +6,15 @@ Este documento resume a rodada inicial de desenvolvimento para facilitar a conti
 
 O **Oraculo LuzComAromas** e um web app separado, mas visual e conceitualmente integrado ao universo da marca LuzComAromas.
 
+Conceito expandido para as proximas rodadas: **Bruxa dos Dados**.
+
+Este conceito une:
+
+- logica: organizacao, processos, dados, planilhas e tomada de decisao;
+- intuicao: magia, rituais, pausas estrategicas, cristais, fases da lua e aromas.
+
+O app deve parecer uma ponte entre clareza operacional e escuta interna: uma experiencia premium para transformar escolhas em pequenos rituais de presenca.
+
 URL de producao:
 
 - https://cartasdetarot.vercel.app
@@ -77,14 +86,45 @@ Linguagem de marca:
 - "pausa"
 - "voltar para casa em si"
 
+Tom de voz:
+
+- sensorial, acolhedor e ritualistico;
+- evitar linguagem generica/cliche de Tarot;
+- conectar sutilmente misticismo e mundo real/corporativo;
+- relacionar leituras a gestos simples de autocuidado: acender uma vela, organizar o ambiente, fazer uma pausa estrategica, preparar um cafe de qualidade;
+- quando fizer sentido, usar referencias a processos, dados e decisao sem quebrar a atmosfera mistica.
+
 Estilo visual:
 
 - fundo roxo profundo e preto;
 - detalhes dourados;
 - bordas finas;
-- CTAs retangulares, nao arredondados;
+- CTAs estritamente retangulares, com `rounded-none`;
+- nao usar bordas arredondadas em botoes/CTAs principais;
 - atmosfera mistica, sensorial e premium;
 - cartas/cristais tratados como extensoes de rituais.
+
+Tokens visuais obrigatorios:
+
+- Fundo principal escuro: `#0a041a`
+- Roxo profundo: `#1E1035`
+- Dourado: `#C9A84A`
+- Dourado claro: `#E8CC6C`
+- Texto principal lavanda: `#EDE6F7`
+- Serenidade: `#9B6FC4`
+- Energia: `#C97A4A`
+- Intuicao: `#9A6A8D`
+- Purificacao: `#6FA88A`
+
+Regras tecnicas/design system:
+
+- usar Server Components por padrao;
+- usar `"use client"` somente quando houver hooks/interatividade;
+- manter TypeScript rigoroso;
+- nao usar `any`; criar interfaces/tipos para dados;
+- usar Tailwind CSS e Lucide React;
+- priorizar transicoes cinematograficas suaves, fade-ins e glow sutil;
+- preservar misterio: cartas nao devem aparecer como catalogo aberto.
 
 ## Funcionalidades implementadas
 
