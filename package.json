@@ -1,0 +1,12 @@
+{
+  "name": "cartasdetarot",
+  "version": "1.0.0",
+  "description": "Aplicação de Cartas de Tarot - Arcanos Maiores",
+  "main": "server.js",
+  "scripts": {
+    "start": "python3 server.py",
+    "dev": "python3 server.py"
+  },
+  "keywords": ["tarot", "cartas", "arcanos"],
+  "license": "MIT"
+}

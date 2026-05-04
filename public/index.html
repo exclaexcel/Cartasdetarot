@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✨ Cartas de Tarot — Arcanos Maiores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+
+  <header>
+    <h1>✨ Cartas de Tarot ✨</h1>
+    <p class="subtitle">Arcanos Maiores — Consulte o destino</p>
+  </header>
+
+  <main>
+    <section class="controles">
+      <button id="btn-embaralhar" class="btn btn-embaralhar">
+        🔀 Embaralhar
+      </button>
+      <button id="btn-tirar" class="btn btn-tirar" disabled>
+        🃏 Tirar Carta
+      </button>
+      <button id="btn-tres" class="btn btn-tres" disabled>
+        🎴 Tirada de 3 Cartas
+      </button>
+      <button id="btn-reset" class="btn btn-reset" style="display:none">
+        🔄 Nova Consulta
+      </button>
+    </section>
+
+    <section class="mesa" id="mesa">
+      <div class="instrucao" id="instrucao">
+        <div class="cristal">🔮</div>
+        <p>Embaralhe as cartas e concentre-se na sua pergunta...</p>
+      </div>
+    </section>
+
+    <section class="leitura" id="leitura" style="display:none">
+    </section>
+  </main>
+
+  <footer>
+    <p>Cartas de Tarot — 22 Arcanos Maiores • Feito com ✨ e 💜</p>
+  </footer>
+
+  <script src="cartas.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

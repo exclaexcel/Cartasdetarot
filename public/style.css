@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --roxo-escuro: #1a0a2e;
+  --roxo-medio: #2d1b4e;
+  --roxo-claro: #6c3fa0;
+  --dourado: #d4a843;
+  --dourado-claro: #f0d68a;
+  --branco: #f0e6ff;
+  --texto: #e8d5ff;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: linear-gradient(135deg, var(--roxo-escuro) 0%, #0d0221 50%, #1a0a2e 100%);
+  color: var(--texto);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration) ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--dourado);
+  text-shadow: 0 0 20px rgba(212, 168, 67, 0.5), 0 0 40px rgba(212, 168, 67, 0.2);
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--texto);
+  opacity: 0.8;
+  font-style: italic;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--dourado);
+  background: transparent;
+  color: var(--dourado);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover:not(:disabled) {
+  background: rgba(212, 168, 67, 0.15);
+  box-shadow: 0 0 20px rgba(212, 168, 67, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.mesa {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.instrucao {
+  text-align: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cristal {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.instrucao p {
+  font-style: italic;
+  color: var(--texto);
+  opacity: 0.7;
+  font-size: 1.1rem;
+}
+
+/* Carta */
+.carta-container {
+  width: 180px;
+  height: 300px;
+  perspective: 800px;
+  cursor: default;
+}
+
+.carta {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carta.virada {
+  transform: rotateY(180deg);
+}
+
+.carta-frente, .carta-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta-verso {
+  background: linear-gradient(135deg, var(--roxo-medio) 0%, var(--roxo-escuro) 100%);
+  border: 2px solid var(--dourado);
+  box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+}
+
+.carta-verso-inner {
+  width: 85%;
+  height: 90%;
+  border: 1px solid var(--dourado);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: repeating-conic-gradient(
+    rgba(212, 168, 67, 0.05) 0% 25%,
+    transparent 0% 50%
+  ) 50% / 20px 20px;
+}
+
+.carta-verso-inner .verso-simbolo {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.carta-verso-inner .verso-texto {
+  font-size: 0.7rem;
+  color: var(--dourado);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.carta-frente {
+  background: linear-gradient(180deg, #1a0a3e 0%, #2d1b5e 50%, #1a0a3e 100%);
+  border: 2px solid var(--dourado);
+  transform: rotateY(180deg);
+  padding: 1rem 0.5rem;
+  box-shadow: 0 4px 30px rgba(212, 168, 67, 0.4);
+  text-align: center;
+  gap: 0.3rem;
+}
+
+.carta-frente .numero {
+  font-size: 0.8rem;
+  color: var(--dourado);
+  letter-spacing: 2px;
+}
+
+.carta-frente .simbolo {
+  font-size: 3.5rem;
+  margin: 0.3rem 0;
+  filter: drop-shadow(0 0 10px rgba(212, 168, 67, 0.5));
+}
+
+.carta-frente .nome {
+  font-size: 1rem;
+  color: var(--dourado-claro);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.carta-frente .elemento {
+  font-size: 0.7rem;
+  color: var(--texto);
+  opacity: 0.6;
+}
+
+.carta-invertida .carta-frente {
+  border-color: #a044ff;
+  box-shadow: 0 4px 30px rgba(160, 68, 255, 0.4);
+}
+
+.carta-invertida .carta-frente .nome {
+  color: #c88aff;
+}
+
+.carta-invertida .tag-invertida {
+  display: block;
+}
+
+.tag-invertida {
+  display: none;
+  font-size: 0.65rem;
+  color: #c88aff;
+  background: rgba(160, 68, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 0.2rem;
+}
+
+/* Animação de entrada */
+.carta-container {
+  opacity: 0;
+  transform: translateY(40px) scale(0.8);
+  animation: cartaEntrada 0.6s ease-out forwards;
+}
+
+.carta-container:nth-child(2) { animation-delay: 0.2s; }
+.carta-container:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes cartaEntrada {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Embaralhar animação */
+@keyframes embaralhar {
+  0% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-20px) rotate(-5deg); }
+  50% { transform: translateX(20px) rotate(5deg); }
+  75% { transform: translateX(-10px) rotate(-3deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+.embaralhando {
+  animation: embaralhar 0.5s ease-in-out;
+}
+
+/* Leitura */
+.leitura {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(45, 27, 78, 0.5);
+  border: 1px solid rgba(212, 168, 67, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.leitura-carta {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 168, 67, 0.15);
+}
+
+.leitura-carta:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.leitura-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.leitura-header .posicao {
+  font-size: 0.75rem;
+  color: var(--roxo-claro);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(108, 63, 160, 0.3);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.leitura-header h3 {
+  color: var(--dourado);
+  font-size: 1.2rem;
+}
+
+.leitura-header .leitura-simbolo {
+  font-size: 1.5rem;
+}
+
+.leitura-significado {
+  color: var(--texto);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.leitura-palavras {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.palavra-chave {
+  font-size: 0.75rem;
+  color: var(--dourado);
+  background: rgba(212, 168, 67, 0.1);
+  border: 1px solid rgba(212, 168, 67, 0.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Tirada de 3 cartas - labels */
+.tirada-label {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.tirada-label span {
+  font-size: 0.7rem;
+  color: var(--dourado);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(212, 168, 67, 0.1);
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--texto);
+  opacity: 0.4;
+  font-size: 0.85rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 1.8rem; }
+  .carta-container { width: 140px; height: 240px; }
+  .carta-frente .simbolo { font-size: 2.5rem; }
+  .carta-frente .nome { font-size: 0.85rem; }
+  .controles { gap: 0.5rem; }
+  .btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+}

@@ -2,13 +2,26 @@
 
 ## Cursor Cloud specific instructions
 
-This repository ("Cartasdetarot" / Tarot Cards) is currently an empty, freshly initialized project. It contains only a `README.md`.
+Este repositório é uma aplicação web de **Cartas de Tarot** (Arcanos Maiores) 100% offline, sem dependências externas.
 
-- **No application code, dependencies, or services exist yet.** There is nothing to build, lint, test, or run.
-- **No package manager lockfiles** (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, etc.) are present.
-- **No configuration files** (tsconfig, vite, webpack, Docker, etc.) are present.
+### Como rodar
 
-When application code is added in the future, update this section with:
-- How to install dependencies and which package manager to use.
-- How to start the dev server, run tests, and lint.
-- Any non-obvious environment setup steps or gotchas.
+```bash
+python3 server.py
+```
+
+O servidor inicia em `http://localhost:3000`. Serve os arquivos estáticos da pasta `public/`.
+
+### Estrutura
+
+- `server.py` — Servidor HTTP (Python stdlib, zero dependências)
+- `public/index.html` — Interface principal
+- `public/style.css` — Estilos com tema místico
+- `public/cartas.js` — Dados dos 22 Arcanos Maiores em português
+- `public/app.js` — Lógica de embaralhar, tirar cartas e exibir leituras
+
+### Notas
+
+- **Não precisa de `npm install` ou pip install** — usa apenas Python stdlib (`http.server`).
+- Node.js **não está instalado** no ambiente. O servidor usa Python 3.
+- O `package.json` existe apenas como metadata; os scripts `start`/`dev` chamam `python3 server.py`.
