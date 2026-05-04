@@ -194,9 +194,9 @@ export function TarotReading() {
           <div className="mt-10">
             <div className="mb-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
               <div>
-                <p className="eyebrow text-text-muted">Baralho dos 22 Arcanos</p>
+                <p className="eyebrow text-text-muted">Baralho oculto</p>
                 <p className="mt-2 text-sm text-text-secondary">
-                  Toque nas cartas viradas para baixo até completar a sua tiragem.
+                  As cartas permanecem em mistério. Toque pelas costas e revele apenas quando a mesa estiver completa.
                 </p>
               </div>
               <p className="eyebrow text-golden">
