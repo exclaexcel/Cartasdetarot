@@ -4,8 +4,16 @@
 
 :root {
   color-scheme: dark;
-  --background: #07020f;
-  --foreground: #fbf4df;
+  --background: #1e1035;
+  --foreground: #ede6f7;
+  --lca-gold: #c9a84a;
+  --lca-gold-light: #e8cc6c;
+  --lca-deep: #1e1035;
+  --lca-deepest: #0a041a;
+  --lca-serenidade: #9b6fc4;
+  --lca-energia: #c97a4a;
+  --lca-intuicao: #9a6a8d;
+  --lca-purificacao: #6fa88a;
 }
 
 * {
@@ -20,11 +28,14 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 20% 10%, rgba(141, 92, 246, 0.24), transparent 32rem),
-    radial-gradient(circle at 85% 0%, rgba(246, 197, 95, 0.14), transparent 26rem),
-    linear-gradient(135deg, #050108 0%, #140623 48%, #050108 100%);
+    radial-gradient(circle at 20% 8%, rgba(155, 111, 196, 0.18), transparent 30rem),
+    radial-gradient(circle at 82% 0%, rgba(201, 168, 74, 0.12), transparent 28rem),
+    radial-gradient(circle at 50% 100%, rgba(154, 106, 141, 0.16), transparent 30rem),
+    linear-gradient(135deg, #0a041a 0%, #1e1035 48%, #120830 100%);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
 }
 
 a {
@@ -46,13 +57,42 @@ a {
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(246, 197, 95, 0.72), rgba(157, 78, 221, 0.28), rgba(246, 197, 95, 0.18));
+  background: linear-gradient(135deg, rgba(201, 168, 74, 0.72), rgba(155, 111, 196, 0.24), rgba(201, 168, 74, 0.16));
   content: "";
   mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   mask-composite: exclude;
   pointer-events: none;
+}
+
+.brand-wordmark {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+}
+
+.section-divider {
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, var(--lca-gold), transparent);
+}
+
+.lca-button {
+  border-radius: 1px;
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.ritual-card {
+  border: 1px solid rgba(201, 168, 74, 0.22);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(201, 168, 74, 0.12), transparent 34%),
+    rgba(30, 16, 53, 0.72);
+  backdrop-filter: blur(16px);
 }
 
 .star-field {

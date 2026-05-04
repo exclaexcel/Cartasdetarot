@@ -9,33 +9,63 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        midnight: "#08030f",
-        eclipse: "#11071f",
+        midnight: "#0a041a",
+        eclipse: "#1E1035",
+        deep: "#1E1035",
+        "deep-soft": "#2D1B4E",
+        golden: "#C9A84A",
+        "golden-light": "#E8CC6C",
+        lavender: "#EDE6F7",
+        plum: "#2D1B4E",
+        candle: "#EDE6F7",
         amethyst: {
-          100: "#f0e7ff",
-          300: "#c79cff",
-          500: "#8a4fff",
-          700: "#4b197d",
-          900: "#1c092d"
+          100: "#F5F0FD",
+          300: "#C9A9C5",
+          500: "#9B6FC4",
+          700: "#8854B9",
+          900: "#1E1035"
         },
         gold: {
-          200: "#f8e6a0",
-          400: "#d9a441",
-          600: "#9b6a18"
-        }
+          200: "#E8CC6C",
+          400: "#C9A84A",
+          600: "#826A27"
+        },
+        ritual: {
+          serenidade: "#9B6FC4",
+          energia: "#C97A4A",
+          intuicao: "#9A6A8D",
+          purificacao: "#6FA88A"
+        },
+        serenidade: "#9B6FC4",
+        energia: "#C97A4A",
+        intuicao: "#9A6A8D",
+        purificacao: "#6FA88A",
+        "bg-light": "#F5F0FD",
+        "bg-card": "rgba(30, 16, 53, 0.75)",
+        "bg-surface": "rgba(30, 16, 53, 0.88)",
+        surface: "rgba(30, 16, 53, 0.88)",
+        card: "rgba(30, 16, 53, 0.75)",
+        "bg-section-mid": "rgba(45, 20, 80, 0.70)",
+        "bg-deep": "rgba(10, 4, 26, 0.98)",
+        "text-primary": "#EDE6F7",
+        "text-secondary": "rgba(237, 230, 247, 0.65)",
+        "text-muted": "rgba(237, 230, 247, 0.45)",
+        "border-gold": "rgba(212, 184, 74, 0.20)",
+        "border-subtle": "rgba(237, 230, 247, 0.08)"
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"]
+        display: ["var(--font-montserrat)", "Montserrat", "sans-serif"],
+        sans: ["var(--font-raleway)", "Raleway", "system-ui", "sans-serif"]
       },
       backgroundImage: {
         "mystic-radial":
-          "radial-gradient(circle at top left, rgba(138,79,255,0.28), transparent 34%), radial-gradient(circle at 80% 12%, rgba(217,164,65,0.18), transparent 30%), linear-gradient(135deg, #08030f 0%, #160826 55%, #020106 100%)",
-        "gold-line": "linear-gradient(90deg, transparent, rgba(248,230,160,0.76), transparent)"
+          "radial-gradient(circle at top left, rgba(155,111,196,0.22), transparent 34%), radial-gradient(circle at 80% 12%, rgba(201,168,74,0.16), transparent 30%), linear-gradient(135deg, #0a041a 0%, #1E1035 55%, #0a041a 100%)",
+        "gold-line": "linear-gradient(90deg, transparent, rgba(201,168,74,0.76), transparent)"
       },
       boxShadow: {
-        aura: "0 0 60px rgba(138,79,255,0.22)",
-        gold: "0 20px 80px rgba(217,164,65,0.18)"
+        aura: "0 0 60px rgba(155,111,196,0.20)",
+        gold: "0 20px 80px rgba(201,168,74,0.18)"
       }
     }
   },
