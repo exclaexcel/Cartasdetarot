@@ -1,4 +1,4 @@
-import { cards, ritualSteps } from "@/lib/content";
+import { ritualSteps } from "@/lib/content";
 import { TarotReading } from "@/components/tarot-reading";
 import { Flame, Moon, Stars } from "lucide-react";
 
@@ -17,9 +17,9 @@ export default function TarotPage() {
             </h1>
             <div className="section-divider my-8" />
             <p className="max-w-xl font-sans text-base font-light leading-8 tracking-[0.05em] text-text-secondary">
-              Cada carta foi reinterpretada no universo LuzComAromas: vela,
-              aroma, presença e intenção. Escolha pelo chamado visual e use a
-              mensagem como um pequeno ritual para o dia.
+              Cada carta permanece velada até o momento certo. Escolha pelo
+              chamado visual, complete a mesa e permita que a mensagem apareça
+              como um pequeno ritual para o dia.
             </p>
           </div>
 
@@ -36,8 +36,9 @@ export default function TarotPage() {
               </div>
 
               <p className="mt-6 text-sm leading-7 tracking-[0.05em] text-text-secondary">
-                Defina a profundidade da leitura, embaralhe os 22 Arcanos Maiores
-                e toque nas cartas que chamarem por você.
+                Defina a profundidade da leitura, embaralhe os 22 Arcanos
+                Maiores e toque nas cartas ainda ocultas. O mistério só se abre
+                quando você revelar a tiragem.
               </p>
             </div>
           </div>
@@ -45,33 +46,6 @@ export default function TarotPage() {
       </section>
 
       <TarotReading />
-
-      <section className="mx-auto max-w-7xl px-6 pb-20">
-        <div className="mb-10 text-center">
-          <p className="eyebrow text-golden">Baralho completo</p>
-          <h2 className="mt-4 font-serif text-4xl font-light tracking-[0.04em] text-text-primary sm:text-5xl">
-            22 caminhos para escutar a própria chama.
-          </h2>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {cards.map((card) => (
-            <article
-              key={card.name}
-              className="group border border-border-gold bg-card p-5 transition duration-300 hover:-translate-y-1 hover:border-golden/70 hover:bg-white/[0.08]"
-            >
-              <div className={`mb-5 grid h-24 place-items-center bg-gradient-to-br ${card.gradient}`}>
-                <card.Icon className="h-10 w-10 text-golden-light drop-shadow-[0_0_18px_rgba(201,168,74,0.45)]" />
-              </div>
-              <p className="eyebrow text-text-muted">Arcano {card.number} · {card.collection}</p>
-              <h3 className="mt-2 font-serif text-2xl font-light text-text-primary">{card.name}</h3>
-              <p className="mt-2 font-serif text-lg italic leading-7 text-text-secondary">{card.message}</p>
-              <p className="mt-4 border-t border-border-subtle pt-4 text-xs uppercase tracking-[0.18em] text-golden/80">
-                {card.ritual}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-20">
         <div className="grid gap-6 md:grid-cols-3">
@@ -91,8 +65,8 @@ export default function TarotPage() {
           <Flame className="mx-auto h-10 w-10 text-golden" />
           <h2 className="mt-4 font-serif text-4xl font-light text-text-primary">Pronta para receber o recado?</h2>
           <p className="mx-auto mt-3 max-w-2xl text-text-secondary">
-            A próxima camada pode trazer embaralhamento, revelação por clique,
-            carta do dia e recomendação de vela da coleção correspondente.
+            O baralho fica fechado para preservar o encanto. Cada Arcano aparece
+            apenas quando a sua escolha completa a mesa e você acende a revelação.
           </p>
         </div>
       </section>
