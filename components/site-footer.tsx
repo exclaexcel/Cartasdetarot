@@ -1,4 +1,4 @@
-import { Instagram, Mail, MoonStar } from "lucide-react";
+import { Mail, MoonStar, Sparkles } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -17,7 +17,7 @@ export function SiteFooter() {
             <span className="sr-only">Email</span>
           </a>
           <a className="transition hover:text-gold-200" href="https://instagram.com" rel="noreferrer" target="_blank">
-            <Instagram className="h-5 w-5" />
+            <Sparkles className="h-5 w-5" />
             <span className="sr-only">Instagram</span>
           </a>
         </div>
