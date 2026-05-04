@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight, Gem, Sparkles } from "lucide-react";
 import { crystals } from "@/lib/content";
 
@@ -31,9 +32,26 @@ export default function CrystalsPage() {
               className="mystic-border group overflow-hidden bg-bg-card/80 p-6 shadow-aura backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-bg-surface"
               key={crystal.name}
             >
-              <div
-                className={`h-36 rounded-[1.5rem] bg-gradient-to-br ${crystal.gradient} opacity-90 shadow-gold transition duration-300 group-hover:scale-[1.02]`}
-              />
+              <div className="relative h-48 overflow-hidden border border-golden/20 bg-deep shadow-gold">
+                <Image
+                  src={crystal.image.src}
+                  alt={crystal.image.alt}
+                  fill
+                  sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-95"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${crystal.gradient} opacity-45 mix-blend-screen`} />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep via-deep/70 to-transparent p-3">
+                  <a
+                    href={crystal.image.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[0.58rem] uppercase tracking-[0.18em] text-text-muted transition hover:text-golden"
+                  >
+                    Imagem: {crystal.image.credit}
+                  </a>
+                </div>
+              </div>
               <div className="mt-6 flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs uppercase tracking-[0.34em] text-golden/70">

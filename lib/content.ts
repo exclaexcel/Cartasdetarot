@@ -49,6 +49,12 @@ export const crystals = [
   {
     name: "Ametista",
     chakra: "Coleção Intuição",
+    image: {
+      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Amethyst_crystal.jpg",
+      alt: "Cristal de ametista roxo em detalhe",
+      credit: "Wikimedia Commons",
+      href: "https://commons.wikimedia.org/wiki/File:Amethyst_crystal.jpg"
+    },
     ritual: "Acenda Intuição Lunar, segure a ametista e deixe a pergunta repousar antes de buscar resposta.",
     description:
       "Pedra da escuta interna. Ela suaviza o excesso de pensamento para que a sabedoria possa aparecer em silêncio.",
@@ -58,6 +64,12 @@ export const crystals = [
   {
     name: "Quartzo Rosa",
     chakra: "Coleção Serenidade",
+    image: {
+      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raw_rose_quartz.jpg",
+      alt: "Quartzo rosa bruto em tons suaves",
+      credit: "Wikimedia Commons",
+      href: "https://commons.wikimedia.org/wiki/File:Raw_rose_quartz.jpg"
+    },
     ritual: "Use com Acalanto da Alma quando o corpo pedir maciez e a mente ainda não souber parar.",
     description:
       "Cristal de acolhimento. Ele lembra que descanso, afeto e gentileza também são formas de força.",
@@ -67,6 +79,12 @@ export const crystals = [
   {
     name: "Citrino",
     chakra: "Coleção Energia",
+    image: {
+      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Citrine-crystals.jpg",
+      alt: "Cristais de citrino em tons dourados",
+      credit: "Wikimedia Commons",
+      href: "https://commons.wikimedia.org/wiki/File:Citrine-crystals.jpg"
+    },
     ritual: "Coloque perto da rotina da manhã com Despertar Solar e escolha uma ação pequena para acender o dia.",
     description:
       "Pedra de movimento. Traz calor para decisões que pedem coragem, criatividade e presença no agora.",
@@ -76,6 +94,12 @@ export const crystals = [
   {
     name: "Obsidiana Negra",
     chakra: "Coleção Purificação",
+    image: {
+      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Obsidian_-_Igneous_Rock.jpg",
+      alt: "Obsidiana negra com superfície vítrea",
+      credit: "Wikimedia Commons",
+      href: "https://commons.wikimedia.org/wiki/File:Obsidian_-_Igneous_Rock.jpg"
+    },
     ritual: "Use com Manto de Claridade para encerrar o peso do dia e abrir espaço no ambiente.",
     description:
       "Guardião de limites. Ajuda a nomear o que pesa, cortar ruídos e devolver firmeza ao corpo.",
@@ -85,6 +109,12 @@ export const crystals = [
   {
     name: "Selenita",
     chakra: "Coleção Purificação",
+    image: {
+      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gfp-Gypsum-v-selenite.jpg",
+      alt: "Cristal de selenita translúcido",
+      credit: "Wikimedia Commons",
+      href: "https://commons.wikimedia.org/wiki/File:Gfp-Gypsum-v-selenite.jpg"
+    },
     ritual: "Passe ao redor do espaço antes de acender a vela, como quem abre uma janela interna.",
     description:
       "Cristal de clareza leve. Ele organiza o campo sem pressa, como luz entrando devagar pela casa.",
@@ -94,6 +124,12 @@ export const crystals = [
   {
     name: "Olho de Tigre",
     chakra: "Coleção Energia",
+    image: {
+      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tigers-Eye.jpg",
+      alt: "Pedra olho de tigre polida com faixas douradas",
+      credit: "Wikimedia Commons",
+      href: "https://commons.wikimedia.org/wiki/File:Tigers-Eye.jpg"
+    },
     ritual: "Segure antes de uma decisão e pergunte: qual gesto sustenta minha intenção hoje?",
     description:
       "Pedra de direção. Sustenta foco, magnetismo e a coragem de agir sem abandonar a própria essência.",
