@@ -1,5 +1,6 @@
 import { cards, ritualSteps } from "@/lib/content";
-import { Flame, Moon, Sparkles, Stars } from "lucide-react";
+import { TarotReading } from "@/components/tarot-reading";
+import { Flame, Moon, Stars } from "lucide-react";
 
 export default function TarotPage() {
   return (
@@ -27,45 +28,23 @@ export default function TarotPage() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="eyebrow text-text-muted">
-                    Mesa ritual
+                    Mesa viva
                   </p>
-                  <h2 className="mt-2 font-serif text-3xl font-light text-text-primary">Ritual de 3 cartas</h2>
+                  <h2 className="mt-2 font-serif text-3xl font-light text-text-primary">Escolha sua tiragem</h2>
                 </div>
                 <Stars className="h-10 w-10 text-golden" />
               </div>
 
-              <div className="mt-10 grid gap-5 sm:grid-cols-3">
-                {cards.slice(0, 3).map((card, index) => (
-                  <article
-                    className="group relative min-h-[22rem] overflow-hidden border border-border-gold bg-black/30 p-4 transition duration-300 hover:-translate-y-2 hover:border-golden/70 hover:shadow-gold"
-                    key={card.name}
-                  >
-                    <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-35 transition duration-300 group-hover:opacity-55`} />
-                    <div className="star-field absolute inset-0 opacity-20" />
-                    <div className="relative flex h-full flex-col justify-between border border-border-subtle bg-deep/70 p-5 text-center">
-                      <div>
-                        <p className="eyebrow text-text-muted">
-                          Carta {index + 1} · arcano {card.number}
-                        </p>
-                        <div className="mx-auto mt-8 flex h-24 w-24 items-center justify-center rounded-full border border-golden/30 bg-white/10 text-golden">
-                          <card.Icon className="h-12 w-12" />
-                        </div>
-                      </div>
-                      <div>
-                        <p className="eyebrow mb-2 text-golden">{card.archetype}</p>
-                        <h3 className="font-serif text-3xl font-light text-text-primary">{card.name}</h3>
-                        <p className="mt-3 text-sm leading-6 text-text-secondary">
-                          {card.message}
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
+              <p className="mt-6 text-sm leading-7 tracking-[0.05em] text-text-secondary">
+                Defina a profundidade da leitura, embaralhe os 22 Arcanos Maiores
+                e toque nas cartas que chamarem por você.
+              </p>
             </div>
           </div>
         </div>
       </section>
+
+      <TarotReading />
 
       <section className="mx-auto max-w-7xl px-6 pb-20">
         <div className="mb-10 text-center">
