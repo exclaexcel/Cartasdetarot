@@ -1,5 +1,5 @@
 import { cards, ritualSteps } from "@/lib/content";
-import { Moon, Sparkles, Stars } from "lucide-react";
+import { Flame, Moon, Sparkles, Stars } from "lucide-react";
 
 export default function TarotPage() {
   return (
@@ -7,52 +7,54 @@ export default function TarotPage() {
       <section className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-400/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-gold-200">
+            <span className="eyebrow inline-flex items-center gap-2 text-golden">
               <Moon className="h-4 w-4" />
-              Tiragem intuitiva
+              Tarot LuzComAromas
             </span>
-            <h1 className="mt-6 font-serif text-5xl font-semibold leading-tight text-white sm:text-6xl">
-              Escolha três cartas e deixe o símbolo conversar com a sua alma.
+            <h1 className="mt-6 max-w-3xl font-serif text-5xl font-light leading-tight tracking-[0.04em] text-text-primary sm:text-6xl">
+              Os 22 Arcanos Maiores como chamas de sabedoria.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-amethyst-100/80">
-              A experiência visual prioriza presença, pausa e encantamento: passado,
-              presente e caminho recebem cartas com significados poéticos para guiar uma
-              reflexão acolhedora.
+            <div className="section-divider my-8" />
+            <p className="max-w-xl font-sans text-base font-light leading-8 tracking-[0.05em] text-text-secondary">
+              Cada carta foi reinterpretada no universo LuzComAromas: vela,
+              aroma, presença e intenção. Escolha pelo chamado visual e use a
+              mensagem como um pequeno ritual para o dia.
             </p>
           </div>
 
-          <div className="mystic-border rounded-[2rem] bg-white/[0.04] p-5 shadow-aura backdrop-blur">
-            <div className="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-amethyst-900 via-midnight to-black p-6">
+          <div className="mystic-border bg-surface p-5 shadow-aura backdrop-blur">
+            <div className="border border-border-subtle bg-gradient-to-br from-deep-soft/70 via-deep to-black/40 p-6">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.3em] text-gold-200/70">
-                    Mesa astral
+                  <p className="eyebrow text-text-muted">
+                    Mesa ritual
                   </p>
-                  <h2 className="mt-2 font-serif text-3xl text-white">Ritual de 3 cartas</h2>
+                  <h2 className="mt-2 font-serif text-3xl font-light text-text-primary">Ritual de 3 cartas</h2>
                 </div>
-                <Stars className="h-10 w-10 text-gold-400" />
+                <Stars className="h-10 w-10 text-golden" />
               </div>
 
               <div className="mt-10 grid gap-5 sm:grid-cols-3">
-                {cards.map((card, index) => (
+                {cards.slice(0, 3).map((card, index) => (
                   <article
-                    className="group relative min-h-[22rem] overflow-hidden rounded-[1.5rem] border border-gold-400/20 bg-black/30 p-4 transition duration-300 hover:-translate-y-2 hover:border-gold-200/70 hover:shadow-gold"
+                    className="group relative min-h-[22rem] overflow-hidden border border-border-gold bg-black/30 p-4 transition duration-300 hover:-translate-y-2 hover:border-golden/70 hover:shadow-gold"
                     key={card.name}
                   >
                     <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-35 transition duration-300 group-hover:opacity-55`} />
                     <div className="star-field absolute inset-0 opacity-20" />
-                    <div className="relative flex h-full flex-col justify-between rounded-[1.1rem] border border-white/10 bg-midnight/60 p-5 text-center">
+                    <div className="relative flex h-full flex-col justify-between border border-border-subtle bg-deep/70 p-5 text-center">
                       <div>
-                        <p className="text-xs uppercase tracking-[0.3em] text-gold-200/70">
-                          Carta {index + 1}
+                        <p className="eyebrow text-text-muted">
+                          Carta {index + 1} · arcano {card.number}
                         </p>
-                        <div className="mx-auto mt-8 flex h-24 w-24 items-center justify-center rounded-full border border-gold-400/30 bg-white/10 text-gold-200">
+                        <div className="mx-auto mt-8 flex h-24 w-24 items-center justify-center rounded-full border border-golden/30 bg-white/10 text-golden">
                           <card.Icon className="h-12 w-12" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-serif text-3xl text-white">{card.name}</h3>
-                        <p className="mt-3 text-sm leading-6 text-amethyst-100/75">
+                        <p className="eyebrow mb-2 text-golden">{card.archetype}</p>
+                        <h3 className="font-serif text-3xl font-light text-text-primary">{card.name}</h3>
+                        <p className="mt-3 text-sm leading-6 text-text-secondary">
                           {card.message}
                         </p>
                       </div>
@@ -66,25 +68,52 @@ export default function TarotPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-20">
+        <div className="mb-10 text-center">
+          <p className="eyebrow text-golden">Baralho completo</p>
+          <h2 className="mt-4 font-serif text-4xl font-light tracking-[0.04em] text-text-primary sm:text-5xl">
+            22 caminhos para escutar a própria chama.
+          </h2>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {cards.map((card) => (
+            <article
+              key={card.name}
+              className="group border border-border-gold bg-card p-5 transition duration-300 hover:-translate-y-1 hover:border-golden/70 hover:bg-white/[0.08]"
+            >
+              <div className={`mb-5 grid h-24 place-items-center bg-gradient-to-br ${card.gradient}`}>
+                <card.Icon className="h-10 w-10 text-golden-light drop-shadow-[0_0_18px_rgba(201,168,74,0.45)]" />
+              </div>
+              <p className="eyebrow text-text-muted">Arcano {card.number} · {card.collection}</p>
+              <h3 className="mt-2 font-serif text-2xl font-light text-text-primary">{card.name}</h3>
+              <p className="mt-2 font-serif text-lg italic leading-7 text-text-secondary">{card.message}</p>
+              <p className="mt-4 border-t border-border-subtle pt-4 text-xs uppercase tracking-[0.18em] text-golden/80">
+                {card.ritual}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-20">
         <div className="grid gap-6 md:grid-cols-3">
           {ritualSteps.map(({ icon: Icon, title, description }, index) => (
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6" key={title}>
-              <Icon className="h-7 w-7 text-gold-200" />
-              <span className="font-serif text-4xl text-gold-200">0{index + 1}</span>
-              <h3 className="mt-4 font-serif text-2xl text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-amethyst-100/70">
+            <div className="border border-border-subtle bg-white/[0.04] p-6" key={title}>
+              <Icon className="h-7 w-7 text-golden" />
+              <span className="font-serif text-4xl text-golden">0{index + 1}</span>
+              <h3 className="mt-4 font-serif text-2xl font-light text-text-primary">{title}</h3>
+              <p className="mt-3 text-sm leading-6 text-text-secondary">
                 {description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 rounded-[2rem] border border-gold-400/20 bg-gradient-to-r from-gold-400/15 via-amethyst-500/10 to-transparent p-8 text-center">
-          <Sparkles className="mx-auto h-10 w-10 text-gold-200" />
-          <h2 className="mt-4 font-serif text-4xl text-white">Pronta para receber o recado?</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-amethyst-100/75">
-            Esta versão inicial estabelece a direção visual. A próxima camada pode
-            adicionar embaralhamento, revelação por clique e histórico de leituras.
+        <div className="mt-10 border border-border-gold bg-gradient-to-r from-golden/15 via-intuicao/10 to-transparent p-8 text-center">
+          <Flame className="mx-auto h-10 w-10 text-golden" />
+          <h2 className="mt-4 font-serif text-4xl font-light text-text-primary">Pronta para receber o recado?</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-text-secondary">
+            A próxima camada pode trazer embaralhamento, revelação por clique,
+            carta do dia e recomendação de vela da coleção correspondente.
           </p>
         </div>
       </section>

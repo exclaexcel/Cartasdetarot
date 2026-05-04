@@ -8,17 +8,17 @@ export default function CrystalsPage() {
         <div className="absolute inset-0 -z-10 star-field opacity-20" />
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-400/10 px-4 py-2 text-sm text-gold-200">
+            <span className="inline-flex items-center gap-2 border border-golden/30 bg-golden/10 px-4 py-2 text-[0.68rem] uppercase tracking-[0.3em] text-golden">
               <Gem className="h-4 w-4" />
               Catálogo energético
             </span>
-            <h1 className="mt-8 font-serif text-5xl leading-tight text-white sm:text-6xl">
-              Cristais escolhidos para alinhar intenção, beleza e proteção.
+            <h1 className="mt-8 font-serif text-5xl font-light leading-tight tracking-[0.03em] text-text-primary sm:text-6xl">
+              Cristais escolhidos como extensão das coleções LuzComAromas.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-amethyst-100/80">
-              Uma seleção elegante para quem deseja transformar rituais em
-              momentos de presença. Cada pedra apresenta propriedades,
-              intenções de uso e uma aura visual inspirada em joias naturais.
+            <p className="mt-6 max-w-2xl text-base font-light leading-8 tracking-[0.04em] text-text-secondary">
+              Cada pedra conversa com um estado de alma: Serenidade, Energia,
+              Intuição ou Purificação. A proposta é combinar cristal, aroma e
+              intenção em um ritual simples, bonito e possível.
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@ export default function CrystalsPage() {
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 xl:grid-cols-3">
           {crystals.map((crystal) => (
             <article
-              className="mystic-border group overflow-hidden rounded-[2rem] bg-white/[0.045] p-6 shadow-aura backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07]"
+              className="mystic-border group overflow-hidden bg-bg-card/80 p-6 shadow-aura backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-bg-surface"
               key={crystal.name}
             >
               <div
@@ -36,22 +36,25 @@ export default function CrystalsPage() {
               />
               <div className="mt-6 flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.34em] text-gold-200/70">
+                  <p className="text-xs uppercase tracking-[0.34em] text-golden/70">
                     {crystal.chakra}
                   </p>
-                  <h2 className="mt-2 font-serif text-3xl text-white">
+                  <h2 className="mt-2 font-serif text-3xl text-text-primary">
                     {crystal.name}
                   </h2>
                 </div>
-                <Sparkles className="mt-2 h-5 w-5 text-gold-400" />
+                <Sparkles className="mt-2 h-5 w-5 text-golden" />
               </div>
-              <p className="mt-4 leading-7 text-amethyst-100/75">
+              <p className="mt-4 text-sm leading-7 tracking-[0.04em] text-text-secondary">
                 {crystal.description}
+              </p>
+              <p className="mt-4 border-l border-golden/35 pl-4 font-serif text-lg italic leading-7 text-text-primary/85">
+                {crystal.ritual}
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {crystal.properties.map((property) => (
                   <span
-                    className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-sm text-gold-200/90"
+                    className="border border-golden/20 bg-black/15 px-3 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-golden/90"
                     key={property}
                   >
                     {property}
@@ -59,7 +62,7 @@ export default function CrystalsPage() {
                 ))}
               </div>
               <a
-                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-200 transition hover:text-white"
+                className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-golden transition hover:text-text-primary"
                 href="#consulta"
               >
                 Ver ritual sugerido <ArrowRight className="h-4 w-4" />
@@ -70,14 +73,14 @@ export default function CrystalsPage() {
       </section>
 
       <section className="px-6 pb-24" id="consulta">
-        <div className="mx-auto max-w-6xl rounded-[2rem] border border-gold-400/20 bg-gradient-to-br from-amethyst-900/80 to-black/60 p-8 text-center shadow-gold sm:p-12">
-          <p className="text-sm uppercase tracking-[0.34em] text-gold-200">
+        <div className="mx-auto max-w-6xl border border-golden/20 bg-gradient-to-br from-bg-section-mid to-bg-deep p-8 text-center shadow-gold sm:p-12">
+          <p className="text-sm uppercase tracking-[0.34em] text-golden">
             Curadoria LuzComAromas
           </p>
-          <h2 className="mt-4 font-serif text-4xl text-white">
+          <h2 className="mt-4 font-serif text-4xl font-light text-text-primary">
             Monte um kit energético para sua fase atual.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl leading-7 text-amethyst-100/75">
+          <p className="mx-auto mt-4 max-w-2xl leading-7 text-text-secondary">
             Combine cristais, aromas e cartas simbólicas para criar um ritual
             visualmente encantador e fácil de recomendar dentro da experiência
             do app.
