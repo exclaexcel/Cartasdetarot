@@ -1,6 +1,6 @@
-# Contexto do projeto - Oraculo LuzComAromas
+# Contexto do projeto — Cartasdetarot (Oráculo LuzComAromas)
 
-Este documento resume a rodada inicial de desenvolvimento para facilitar a continuidade em proximas sessoes.
+Este documento descreve apenas este repositório e aplicação. Resume o desenvolvimento para facilitar a continuidade em proximas sessoes.
 
 ## Visao geral
 
