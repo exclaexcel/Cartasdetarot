@@ -1,6 +1,6 @@
 # Oraculo LuzComAromas
 
-Web app mistico em Next.js 14 para uma experiencia comercial e visual de tarot, cristais e bem-estar.
+Repositório **Cartasdetarot**: aplicação em Next.js 14 para uma experiencia comercial e visual de tarot, cristais e bem-estar.
 
 ## Stack
 
